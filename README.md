@@ -32,3 +32,31 @@
         String not mutable(meaning you can't use indexing to change individual elements of a string)
     2. How do i create comments in my code?
         You can use the hashtag to create a comment in your code
+
+# 4 Print Formatting FAQs
+    1. I imported print from the_future_module, now print isn't working. what happened?
+        This's because once you import from the_feature_module in Python 2.7. a print statement will no longer work, and print must then use a print() funtion. meaning that you must use print('Whatever you were going to print') or if you are using some formatting: 
+        print('this is a string with an {p}'.format(p='insert'))
+        the_future_module allows you to use Python3 functionality in a Python2 environment, but some functionality is overwritten(such as the print statement, or classic division when you import division).
+
+        Since we are using Jupyter Notebooks, once you so the import alll cells will require the use if the print() function. you'll have to restart Python or start a new notebook to regain the old functionality back.  
+
+# 5.Objects and data structures Assessment Test (Numners, Strings, Lists, Tuples, Dictionaries)
+    - Dictionaries: Using keys and indexing, grab the "hello" from the following dictionaries:
+        d = {'simple_key': 'hello'}
+        # grab "hello"
+        d['simple_key']
+        Can you sort a Dictionaries? why or why not?
+        -> No! Because normal Dictionaries are mappings not a sequence
+    - Tuples: 
+        - What is the major difference between tuples and lists?
+            -> Tuple're immutable.
+        - How do you create a Tuples?
+            -> t = (1, 2, 3)
+    - Sets: 
+        - What's unique about a Set?
+            -> They don't  allow for duplicate items! (like javascript)
+        - Use set to find the unique values of the list
+            list = [1, 2, 3, 4, 5, 5, 5, 6, 10]
+            set(list)  # 1 , 2, 3, 5, 6, 10 remove duplicate values.
+                
